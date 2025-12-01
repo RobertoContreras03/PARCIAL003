@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Carrito — MUNDO REPUESTOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="antialiased">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="../index.html" class="font-bold">MUNDO REPUESTOS</a>
+            <nav class="hidden md:flex gap-4"><a href="../index.html">Inicio</a><a href="ofertas.html">Ofertas</a></nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <h1 class="text-2xl font-bold">Tu carrito</h1>
+        <div id="cartContainer" class="mt-6"></div>
+    </main>
+
+    <footer class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-600">© MUNDO REPUESTOS</div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            window.miCarrito && window.miCarrito.renderCart('#cartContainer');
+        });
+    </script>
+</body>
+
+</html>/

@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MUNDO REPUESTOS </title>
+    <meta name="description" content="Landing Page de MUNDO REPUESTOS —demostración con Tailwind CSS y Vanilla JS." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f7ff',
+                            100: '#eef2ff',
+                            500: '#4f46e5',
+                            600: '#4338ca'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+         :focus {
+            outline: 3px solid rgba(79, 70, 229, 0.18);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span class="text-lg font-bold">MUNDO REPUESTOS</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6" aria-label="Navegación principal">
+                <a href="#features" class="hover:text-indigo-600">Características</a>
+                <a href="#pricing" class="hover:text-indigo-600">Planes</a>
+                <a href="#testimonials" class="hover:text-indigo-600">Testimonios</a>
+                <a href="#faq" class="hover:text-indigo-600">FAQ</a>
+                <a href="pages/ofertas.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-indigo-600 text-indigo-600">Ofertas</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="btnMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menú" class="p-2 rounded-md focus:ring-2 focus:ring-indigo-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="fixed inset-0 bg-black/40 hidden z-40" aria-hidden="true">
+            <div class="absolute right-0 top-0 w-3/4 max-w-xs bg-white h-full p-6 shadow-lg" role="dialog" aria-label="Menu móvil">
+                <button id="btnCloseMenu" class="mb-4 p-2 rounded-md" aria-label="Cerrar menú">MUNDO REPUESTOS</button>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#features" class="block">Garantes</a></li>
+                    <li><a href="#pricing" class="block">Cotizaciones</a></li>
+                    <li><a href="#testimonials" class="block">Testimonios</a></li>
+                    <li><a href="#faq" class="block">FAQ</a></li>
+                    <li><a href="pages/carrito.html" class="block">Carrito de compras</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="bg-gradient-to-r from-brand-500 to-indigo-500 text-white py-16">
+            <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">MUNDO REPUESTOS — Compra tus repuestos y accesorios del rubro automotriz</h1>
+                    <p class="mt-4 text-indigo-100 max-w-xl">Venta de repuestos importados de Estados Unidos para todo tipo de automovil .</p>
+                    <div class="mt-6 flex gap-4">
+                        <a href="#pricing" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold shadow">Comprar
+                            ahora</a>
+                        <a href="#features" class="inline-block border border-white/50 px-6 py-3 rounded-lg">Conocer
+                            más</a>
+                    </div>
+                    <ul class="mt-6 flex gap-4 text-sm text-indigo-100">
+                        <li class="flex items-center gap-2"><strong class="text-white">✅</strong> Garantía 30 días</li>
+                        <li class="flex items-center gap-2"><strong class="text-white">🔒</strong> Pago seguro</li>
+                    </ul>
+                </div>
+
+                <div class="flex justify-center">
+                    <img src="assets/images/toyota.jpg" alt="" class="w-full max-w-md rounded-xl shadow-2xl" />
+                </div>
+            </div>
+        </section>
+        <section id="features" class="container mx-auto px-4 py-16">
+            <h2 class="text-2xl font-bold text-center">SUPER GARANTES</h2>
+            <p class="text-center text-gray-600 mt-2">Todo lo que necesitas para decidirte</p>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+                <!-- 6 items -->
+                <article class="p-6 border rounded-lg hover:shadow-lg transition" role="listitem">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 4v16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold">GRASAS Y LUBRICANTES</h3>
+                            <p class="mt-1 text-sm text-gray-600">Sustancias que reducen la fricción entre superficies en movimiento, pero difieren principalmente en su consistencia: la grasa es semisólida, mientras que el lubricante (como el aceite) es líquido.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="p-6 border rounded-lg hover:shadow-lg transition" role="listitem">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24">
+                            <path d="M4 6h16" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold">ADITIVOS Y QUIMICOS </h3>
+                            <p class="mt-1 text-sm text-gray-600">Sustancias añadidas a diversos productos para mejorar su rendimiento, conservación o apariencia.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="p-6 border rounded-lg hover:shadow-lg transition" role="listitem">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24">
+                            <path d="M12 2l3 7H9l3-7z" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold">HERRAMIENTAS Y EQUIPO DE TALLER</h3>
+                            <p class="mt-1 text-sm text-gray-600">Herramientas manuales (llaves, destornilladores, alicates), herramientas neumáticas (pistolas de impacto, compresores), equipos de diagnóstico (escáneres), y equipo pesado (elevadores, gatos hidráulicos)..</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="p-6 border rounded-lg hover:shadow-lg transition" role="listitem">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24">
+                            <path d="M3 12h18" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold">ACCESORIOS</h3>
+                            <p class="mt-1 text-sm text-gray-600">Elementos adicionales que se pueden añadir a un vehículo para mejorar su funcionalidad, comodidad, seguridad, apariencia o rendimiento.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="p-6 border rounded-lg hover:shadow-lg transition" role="listitem">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24">
+                            <path d="M12 4v16" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold">QUIMICOS </h3>
+                            <p class="mt-1 text-sm text-gray-600">Amplia gama de productos utilizados en la fabricación, mantenimiento y reparación de vehículos, que incluyen combustibles, lubricantes, anticongelantes, pinturas, adhesivos, plásticos y limpiadores.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="p-6 border rounded-lg hover:shadow-lg transition" role="listitem">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24">
+                            <path d="M4 6h16" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold">ELECTRICOS</h3>
+                            <p class="mt-1 text-sm text-gray-600"> Conjunto de componentes eléctricos (batería, alternador, cableado) que suministran energía al vehículo y permiten su funcionamiento.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <section id="pricing" class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold text-center">PLANES DE MANTENIMIENTO DE TU VEHICULO </h2>
+                <p class="text-center text-gray-600 mt-2">Elige el plan ideal</p>
+
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <article class="p-6 bg-white border rounded-lg flex flex-col" tabindex="0">
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold">MANTENIMIENTO BÁSICO. </h3>
+                            <p class="mt-2 text-gray-600">Cambio de aceite y filtro, revisión de líquidos (frenos, refrigerante, dirección asistida, limpiaparabrisas), inspección de neumáticos (presión y desgaste) y verificación de frenos (pastillas y discos)
+                            </p>
+                            <div class="mt-6"><span class="text-3xl font-bold">$250</span><span class="text-gray-600"></span></div>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-600">
+
+                            </ul>
+                        </div>
+                        <div class="mt-6">
+                            <button class="w-full py-2 rounded-md bg-indigo-600 text-white select-plan" data-plan="Básico" data-price="9">Seleccionar</button>
+                        </div>
+                    </article>
+                    <article class="p-6 bg-white border-2 border-indigo-600 rounded-lg shadow-lg" aria-label="Plan recomendado">
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">MANTENIMIENTO INTERMEDIO </h3><span class="px-2 py-1 text-sm bg-indigo-100 text-indigo-700 rounded">Popular</span>
+                            </div>
+                            <p class="mt-2 text-gray-600">Cambio de aceite y filtros (aceite y aire), la revisión de la presión y desgaste de los neumáticos, y la inspección de frenos, luces y líquidos. También abarca la comprobación del estado de correas y escobillas limpiaparabrisas,
+                                y en ocasiones, una revisión más profunda del sistema de dirección y suspensión</p>
+                            <div class="mt-6"><span class="text-3xl font-bold">$350</span><span class="text-gray-600"></span></div>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-600">
+
+                            </ul>
+                        </div>
+                        <div class="mt-6">
+                            <button class="w-full py-2 rounded-md bg-indigo-600 text-white select-plan" data-plan="Pro" data-price="29">Seleccionar</button>
+                        </div>
+                    </article>
+                    <article class="p-6 bg-white border rounded-lg flex flex-col">
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold">MANTENIMIENTO AVANZADO</h3>
+                            <p class="mt-2 text-gray-600">Más allá de los servicios básicos, inspecciones y reemplazos detallados de componentes críticos como correas, caja de cambios, bomba de agua, y sellos del motor, además de un escaneo completo del sistema electrónico, revisión
+                                de suspensión y dirección, y el cambio de fluidos de transmisión y refrigerante</p>
+                            <div class="mt-6"><span class="text-3xl font-bold">$500</span><span class="text-gray-600"></span></div>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-600">
+
+                            </ul>
+                        </div>
+                        <div class="mt-6">
+                            <button class="w-full py-2 rounded-md bg-indigo-600 text-white select-plan" data-plan="Empresa" data-price="99">Seleccionar</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials" class="container mx-auto px-4 py-16">
+            <h2 class="text-2xl font-bold text-center">Lo que dicen nuestros clientes</h2>
+            <div class="mt-8 relative">
+                <div id="slider" class="overflow-hidden">
+                    <div class="flex transition-transform duration-500" style="transform: translateX(0%)">
+                        <figure class="w-full min-w-full p-6">
+                            <blockquote class="text-gray-800">"La calidad de repuestos, tanto como accesorios y la variedad de aditivos, y por el hecho que engloba la mayoria de repuestos necesarios para tu carro lo vuelve un super repuesto confiable y muy recomendado."</blockquote>
+                            <figcaption class="mt-4 flex items-center gap-3"><img src="assets/images/ceo.jpeg" alt="Foto cliente 1" class="w-12 h-12 rounded-full object-cover" />
+                                <div>
+                                    <div class="font-semibold">Ana López</div>
+                                    <div class="text-sm text-gray-600">Cliente frecuente</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="w-full min-w-full p-6">
+                            <blockquote class="text-gray-800">"Cuenta con una amplia variedad de repuesto. ¡No necesito ir a otra parte por que todo está aquí!."</blockquote>
+                            <figcaption class="mt-4 flex items-center gap-3"><img src="assets/images/foto.jpeg" alt="Foto cliente 2" class="w-12 h-12 rounded-full object-cover" />
+                                <div>
+                                    <div class="font-semibold">Carlos Méndez</div>
+                                    <div class="text-sm text-gray-600">Cliente frecuente</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <figure class="w-full min-w-full p-6">
+                            <blockquote class="text-gray-800">"El proceso de compra es rapido."</blockquote>
+                            <figcaption class="mt-4 flex items-center gap-3"><img src="assets/images/foto2.jpeg" alt="Foto cliente 3" class="w-12 h-12 rounded-full object-cover" />
+                                <div>
+                                    <div class="font-semibold">Lucía Pérez</div>
+                                    <div class="text-sm text-gray-600">Cliente frecuente</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="absolute left-2 top-1/2 -translate-y-1/2">
+                    <button id="prevBtn" aria-label="Anterior" class="p-2 rounded-full bg-white shadow">◀</button>
+                </div>
+                <div class="absolute right-2 top-1/2 -translate-y-1/2">
+                    <button id="nextBtn" aria-label="Siguiente" class="p-2 rounded-full bg-white shadow">▶</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="faq" class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold text-center">PREGUNTAS FRECUENTES</h2>
+                <div class="mt-8 space-y-4" id="accordion">
+
+                    <div class="border rounded-lg">
+                        <button class="w-full text-left p-4 flex justify-between items-center faq-btn" aria-expanded="false" aria-controls="faq1" id="faq1-btn"><span>¿El producto es original?
+                                </span><span class="faq-icon">+</span></button>
+                        <div id="faq1" role="region" aria-labelledby="faq1-btn" class="px-4 pb-4 hidden">
+                            <p class="text-sm text-gray-600">Tenemos a disposición productos de fabricantes de equipo original (OEM) y productos equivalentes de marcas reconocidas con calidad garantizada.</p>
+                        </div>
+                    </div>
+                    <div class="border rounded-lg">
+                        <button class="w-full text-left p-4 flex justify-between items-center faq-btn" aria-expanded="false" aria-controls="faq2" id="faq2-btn"><span>¿Los productos tienen garantía?
+                                </span><span class="faq-icon">+</span></button>
+                        <div id="faq2" role="region" aria-labelledby="faq2-btn" class="px-4 pb-4 hidden">
+                            <p class="text-sm text-gray-600">Nuestros productos cuentan con garantías que van desde los 3 hasta los 24 meses.</p>
+                        </div>
+                    </div>
+                    <div class="border rounded-lg">
+                        <button class="w-full text-left p-4 flex justify-between items-center faq-btn" aria-expanded="false" aria-controls="faq3" id="faq3-btn"><span>¿A dónde se envían las devoluciones del pedido?
+                                </span><span class="faq-icon">+</span></button>
+                        <div id="faq3" role="region" aria-labelledby="faq3-btn" class="px-4 pb-4 hidden">
+                            <p class="text-sm text-gray-600">Las devoluciones se efectuarán en el almacén seleccionado o en el que acuerdes con tu asesor y que te sea más conveniente..</p>
+                        </div>
+                    </div>
+                    <div class="border rounded-lg">
+                        <button class="w-full text-left p-4 flex justify-between items-center faq-btn" aria-expanded="false" aria-controls="faq4" id="faq4-btn"><span>¿Qué moneda puedo utilizar para pagar mi pedido?
+                               </span><span class="faq-icon">+</span></button>
+                        <div id="faq4" role="region" aria-labelledby="faq4-btn" class="px-4 pb-4 hidden">
+                            <p class="text-sm text-gray-600">Para realizar compras en línea aceptamos Dólares de los Estados Unidos de América para El Salvador.</p>
+                        </div>
+                    </div>
+                    <div class="border rounded-lg">
+                        <button class="w-full text-left p-4 flex justify-between items-center faq-btn" aria-expanded="false" aria-controls="faq5" id="faq5-btn"><span>¿Cuáles son las formas de pago disponibles?
+                               </span><span class="faq-icon">+</span></button>
+                        <div id="faq5" role="region" aria-labelledby="faq5-btn" class="px-4 pb-4 hidden">
+                            <p class="text-sm text-gray-600">Aceptamos tarjetas de crédito/debito Visa o MasterCard y pagos en efectivo únicamente para retiro en almacenes..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="container mx-auto px-4 py-16">
+            <h2 class="text-2xl font-bold text-center">Contacto</h2>
+            <p class="text-center text-gray-600 mt-2">¿Tienes dudas? Escríbenos</p>
+
+            <form id="contactForm" class="mt-8 max-w-2xl mx-auto grid grid-cols-1 gap-4" novalidate>
+                <div>
+                    <label for="name" class="block text-sm font-medium">Nombre</label>
+                    <input id="name" name="name" required class="mt-1 w-full p-3 border rounded" />
+                    <p class="mt-1 text-sm text-red-600 hidden" id="nameError">Nombre es requerido</p>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Correo</label>
+                    <input id="email" name="email" type="email" required class="mt-1 w-full p-3 border rounded" />
+                    <p class="mt-1 text-sm text-red-600 hidden" id="emailError">Correo válido requerido</p>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 w-full p-3 border rounded" required></textarea>
+                    <p class="mt-1 text-sm text-red-600 hidden" id="msgError">Mensaje es requerido</p>
+                </div>
+                <div class="flex gap-4">
+                    <button type="submit" class="px-6 py-3 bg-indigo-600 text-white rounded">Enviar</button>
+                    <button type="reset" class="px-6 py-3 border rounded">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-gray-200 py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div>
+                <div class="flex items-center gap-2"><svg class="w-8 h-8 text-indigo-400" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12h18" stroke="currentColor" />
+                    </svg><span class="font-bold">MUNDO REPUESTOS </span></div>
+                <p class="mt-3 text-sm text-gray-400">Repuestos y accesorios para tu vehículo.</p>
+            </div>
+            <nav aria-label="Footer - Productos">
+                <h4 class="font-semibold mb-2">SUPER GARANTES</h4>
+                <ul class="space-y-1 text-sm text-gray-400">
+                    <li><a href="#features" class="hover:text-white">Características</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Footer - Empresa">
+                <h4 class="font-semibold mb-2">EMPRESA</h4>
+                <ul class="space-y-1 text-sm text-gray-400">
+                    <li><a href="pages/ofertas.html" class="hover:text-white">Ofertas</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h4 class="font-semibold mb-2">SOPORTE</h4>
+                <ul class="space-y-1 text-sm text-gray-400">
+                    <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
+                </ul>
+                <div class="mt-4 flex gap-3">
+                    <a href="#" aria-label="Twitter" class="p-2 bg-gray-800 rounded"></a>
+                    <a href="#" aria-label="LinkedIn" class="p-2 bg-gray-800 rounded"></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-sm text-gray-500">© <span id="year"></span> MUNDO REPUESTOS. Todos los derechos reservados
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
